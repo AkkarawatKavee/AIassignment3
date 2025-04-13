@@ -131,7 +131,8 @@ for episode in range(EPISODES):
    if episode % 10 == 0:
        print(f"Episode {episode}, Reward: {total_reward}")
 
-torch.save(agent.policy_network.state_dict(), "dqn_models.pth")
+#torch.save(agent.policy_network.state_dict(), "dqn_models.pth")
+torch.save(agent.policy_network.state_dict(), "dqn_models.pkl")
 # Plot training performance
 plt.plot(episode_rewards)
 plt.xlabel("Episode")

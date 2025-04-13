@@ -36,7 +36,8 @@ env = env.unwrapped
 state_dim = env.observation_space.shape[0]
 n_actions = env.action_space.n
 model = Network(state_dim, n_actions)
-model.load_state_dict(torch.load("dqn_models.pth"))
+#model.load_state_dict(torch.load("dqn_models.pth"))
+model.load_state_dict(torch.load("dqn_models.pkl"))
 model.eval()
 
 for i in range (20):
